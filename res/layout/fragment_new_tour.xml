@@ -1,0 +1,201 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From:"
+        android:layout_alignBaseline="@+id/btn_mark"
+        android:layout_marginLeft="10dp" />
+    
+    <!--  <EditText 
+        android:id="@+id/et_from"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_from"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>-->
+
+    <Button
+        android:id="@+id/btn_mark"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/tv_from"
+        android:background="@drawable/datebutton"
+        android:text="mark on map" />
+    
+    <Button
+        android:id="@+id/btn_unmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/btn_mark"
+        android:layout_alignBaseline="@+id/btn_mark"
+        android:background="@drawable/datebutton"
+        android:text="unmark" />
+    
+    <!--***************** TO ****************************-->
+    <TextView 
+        android:id="@+id/tv_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        android:layout_alignLeft="@+id/tv_from"
+        android:layout_alignBaseline="@+id/btn_mark_to"/>
+    
+    <!--  <EditText 
+        android:id="@+id/et_to"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_from"
+        android:layout_below="@+id/et_from"
+        android:layout_marginTop="20dp"/>-->
+    
+    <Button
+        android:id="@+id/btn_mark_to"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_mark"
+        android:layout_below="@+id/btn_mark"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/datebutton"
+        android:text="mark on map" />
+    
+    <Button
+        android:id="@+id/btn_unmark_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_unmark"
+        android:layout_alignTop="@+id/btn_mark_to"
+        android:background="@drawable/datebutton"
+        android:text="unmark" />
+    
+    <!-- ********************* Departure Time ********************** -->
+    
+    <TextView 
+        android:id="@+id/tv_departuretime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Departure Time:"
+        android:layout_alignLeft="@+id/tv_to"
+        android:layout_alignBaseline="@+id/btn_departuretime"/>
+    
+    <Button 
+        android:id="@+id/btn_departuretime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hh:mm"
+        android:layout_toRightOf="@+id/tv_departuretime"
+        android:layout_below="@+id/btn_mark_to"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/datebutton"/>
+    
+    <!-- ++++++++++++++++++++++ Arrival Time ++++++++++++++++++++++++++++++ -->
+    
+    <TextView 
+        android:id="@+id/tv_arrivaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrival Time:"
+        android:layout_alignLeft="@+id/tv_to"
+        android:layout_alignBaseline="@+id/btn_arrivaltime"/>
+    
+    <Button 
+        android:id="@+id/btn_arrivaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hh:mm"
+        android:layout_alignLeft="@+id/btn_departuretime"
+        android:layout_below="@+id/btn_departuretime"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/datebutton"/>
+    
+    <!-- +++++++++++++++++++++++++++ Difficulty ++++++++++++++++++++++++ -->
+    
+    <RatingBar 
+        android:id="@+id/rb_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleY=".70"
+        android:scaleX=".70"
+        android:layout_below="@+id/btn_arrivaltime"
+        android:layout_toRightOf="@+id/tv_difficulty"
+        android:layout_marginTop="20dp"
+        android:stepSize="1"/>
+
+    <TextView
+        android:id="@+id/tv_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_arrivaltime"
+        android:layout_alignTop="@+id/rb_difficulty"
+        android:layout_marginTop="15dp"
+        android:text="Difficulty:" />
+    
+    <!-- +++++++++++++++++++++++++ Logistic +++++++++++++++++++++++++ -->
+    
+    <TextView 
+        android:id="@+id/tv_logistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logistic (Restaurants, shops ...):"
+        android:layout_alignLeft="@+id/tv_difficulty"
+        android:layout_alignBaseline="@+id/btn_logistic"
+        android:layout_below="@+id/tv_difficulty"/>
+    
+    <Button 
+        android:id="@+id/btn_logistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Add"
+        android:layout_toRightOf="@+id/tv_logistic"
+        android:layout_below="@+id/rb_difficulty"
+        android:background="@drawable/datebutton"/>
+    
+    <FrameLayout
+            android:id="@+id/container_logistic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_logistic"
+            />
+    
+    <!-- ++++++++++++++++++++++++++++ Remark ++++++++++++++++++++++++++++ -->
+    
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remark:"
+        android:layout_alignLeft="@+id/tv_logistic"
+        android:layout_below="@+id/container_logistic"
+        android:layout_marginTop="20dp"
+        />
+    
+   <EditText
+        android:id="@+id/et_remark"
+        android:layout_alignLeft="@+id/tv_remark"
+    	android:inputType="textMultiLine" 
+    	android:lines="8"
+    	android:layout_height="wrap_content" 
+    	android:layout_width="300dp" 
+    	android:scrollbars="vertical"
+    	android:layout_below="@+id/tv_remark"
+    	android:background="@drawable/multilinetext" >
+    </EditText>
+    
+    
+
+</RelativeLayout>
+
+</ScrollView>

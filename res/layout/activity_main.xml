@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_buttons"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <FrameLayout
+            android:id="@+id/container_notification"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" 
+            />
+
+        <FrameLayout
+            android:id="@+id/container_option"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+   <LinearLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:background="@drawable/imagebutton"
+            android:scaleType="centerInside"
+            android:drawableTop="@drawable/camera" 
+            android:text="camera"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/videoButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:background="@drawable/imagebutton"
+            android:scaleType="centerInside"
+            android:drawableTop="@drawable/video" 
+            android:text="video"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+       
+
+        <Button
+            android:id="@+id/noteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:background="@drawable/imagebutton"
+            android:scaleType="centerInside"
+            android:drawableTop="@drawable/note" 
+            android:text="note"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/mineButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:background="@drawable/imagebutton"
+            android:scaleType="centerInside"
+            android:drawableTop="@drawable/mine" 
+            android:text="mine"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+           />
+
+    </LinearLayout>
+
+</RelativeLayout>

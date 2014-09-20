@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapPlanActivity" >
+
+    <fragment
+        android:id="@+id/map_plan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_button_bar"
+        class="com.google.android.gms.maps.MapFragment" />
+    
+    <LinearLayout 
+        android:id="@+id/ll_button_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">   
+        
+        <Button 
+            android:id="@+id/btn_save_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save Location"
+            android:background="@drawable/imagebutton"
+            android:textColor="@color/white"/>
+        
+        <Button 
+            android:id="@+id/btn_clear_map"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear map"
+            android:background="@drawable/imagebutton"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>
